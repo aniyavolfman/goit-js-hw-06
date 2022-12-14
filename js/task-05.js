@@ -3,10 +3,11 @@ const spanEl = document.querySelector('#name-output');
 
 
 const addInputEventListener = inputEl.addEventListener('input', (event) => {
-    spanEl.textContent = event.currentTarget.value;
+    const input = event.currentTarget;
+    spanEl.textContent = input.value;
 
     const addDefaultName = () => {
-    if (event.currentTarget.value.length === 0) {
+    if (input.value.length === 0) {
     spanEl.textContent = 'Anonymous'};
     }
 
