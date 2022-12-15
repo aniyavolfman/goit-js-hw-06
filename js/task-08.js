@@ -23,14 +23,14 @@ function onFormSubmit(event) {
             password,  
         }
             
-        console.log(formData);
+            console.log(formData);
+            event.currentTarget.reset();
         }
         
     } 
 
     addAlert();
 
-    event.currentTarget.reset();
 
     
 }
