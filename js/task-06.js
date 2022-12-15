@@ -6,7 +6,7 @@ const addInputBlur = inputEl.addEventListener('blur', (event) => {
     input.classList.add('invalid');
     
     const checkValue = () => {
-        if (input.value.length >= Number(input.dataset.length)) {
+        if (input.value.length === Number(input.dataset.length)) {
 
             input.classList.remove('invalid');
             input.classList.add('valid');
