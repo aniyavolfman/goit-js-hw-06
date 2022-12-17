@@ -3,7 +3,6 @@ const inputEl = document.querySelector('input');
 const addInputBlur = inputEl.addEventListener('blur', (event) => {
 
     const input = event.currentTarget;
-    input.classList.add('invalid');
     
     const checkValue = () => {
         if (input.value.length === Number(input.dataset.length)) {
@@ -12,9 +11,10 @@ const addInputBlur = inputEl.addEventListener('blur', (event) => {
             input.classList.add('valid');
         }
         
-        if (input.value.length > Number(input.dataset.length)) {
+        if (input.value.length < Number(input.dataset.length) || input.value.length > Number(input.dataset.length)) {
 
             input.classList.remove('valid');
+            input.classList.add('invalid');
         }
     }
 
